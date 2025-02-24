@@ -1,0 +1,70 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Fira Code', monospace; /* Fonte Fira Code como alternativa à Fidedsys */
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3) contrast(1.3); /* Brilho reduzido em 50% e contraste aumentado em 30% */
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.1; /* Overlay sutil */
+    mix-blend-mode: luminosity; /* Efeito de preto e branco */
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Barra preta semi-transparente */
+    text-align: center;
+    padding: 10px 0;
+    z-index: 2;
+}
+
+.overlay-text p {
+    margin: 0;
+    font-size: 1rem; /* Fonte menor */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+#soundButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#soundButton:focus {
+    outline: none;
+}
